@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1152" height="822" viewBox="0 0 1152 822">
+<rect width="1152" height="822" rx="10" fill="#000"/>
+<rect width="1152" height="30" rx="10" fill="#1f1f24"/>
+<rect y="20" width="1152" height="10" fill="#1f1f24"/>
+<circle cx="20" cy="15" r="6" fill="#ff5f57"/><circle cx="40" cy="15" r="6" fill="#febc2e"/><circle cx="60" cy="15" r="6" fill="#28c840"/>
+<text x="576" y="20" fill="#9a9aa6" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle">Claude Invaders: new high score</text>
+<g font-family="Consolas, Menlo, 'DejaVu Sans Mono', monospace" font-size="16" font-weight="bold" xml:space="preserve">
+<rect x="396" y="346" width="90" height="10" fill="#f2f2f2"/>
+<rect x="516" y="346" width="90" height="10" fill="#f2f2f2"/>
+<rect x="396" y="356" width="90" height="10" fill="#f2f2f2"/>
+<rect x="516" y="356" width="90" height="10" fill="#f2f2f2"/>
+<rect x="396" y="366" width="90" height="10" fill="#f2f2f2"/>
+<rect x="516" y="366" width="90" height="10" fill="#f2f2f2"/>
+<rect x="456" y="376" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="376" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="376" width="30" height="10" fill="#f2f2f2"/>
+<rect x="456" y="386" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="386" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="386" width="30" height="10" fill="#f2f2f2"/>
+<rect x="456" y="396" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="396" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="396" width="30" height="10" fill="#f2f2f2"/>
+<rect x="426" y="406" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="406" width="90" height="10" fill="#f2f2f2"/>
+<rect x="426" y="416" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="416" width="90" height="10" fill="#f2f2f2"/>
+<rect x="426" y="426" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="426" width="90" height="10" fill="#f2f2f2"/>
+<rect x="396" y="436" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="436" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="436" width="30" height="10" fill="#f2f2f2"/>
+<rect x="396" y="446" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="446" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="446" width="30" height="10" fill="#f2f2f2"/>
+<rect x="396" y="456" width="30" height="10" fill="#f2f2f2"/>
+<rect x="516" y="456" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="456" width="30" height="10" fill="#f2f2f2"/>
+<rect x="396" y="466" width="90" height="10" fill="#f2f2f2"/>
+<rect x="516" y="466" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="466" width="30" height="10" fill="#f2f2f2"/>
+<rect x="396" y="476" width="90" height="10" fill="#f2f2f2"/>
+<rect x="516" y="476" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="476" width="30" height="10" fill="#f2f2f2"/>
+<rect x="396" y="486" width="90" height="10" fill="#f2f2f2"/>
+<rect x="516" y="486" width="30" height="10" fill="#f2f2f2"/>
+<rect x="576" y="486" width="30" height="10" fill="#f2f2f2"/>
+<rect x="396" y="516" width="90" height="10" fill="#5a5a66"/>
+<rect x="516" y="516" width="90" height="10" fill="#5a5a66"/>
+<rect x="636" y="516" width="90" height="10" fill="#d97757"/>
+<text x="26" y="61" fill="#5a5a66" textLength="560" lengthAdjust="spacingAndGlyphs">SCORE&lt;1&gt;                                        HI-SCORE</text>
+<text x="596" y="61" fill="#ffe040" textLength="50" lengthAdjust="spacingAndGlyphs">05000</text>
+<text x="1056" y="61" fill="#f2f2f2" textLength="70" lengthAdjust="spacingAndGlyphs">WAVE 01</text>
+<rect x="20.25" y="66" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="66" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="86" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="86" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="106" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="106" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="126" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="126" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="146" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="146" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="166" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="166" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="186" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="186" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="206" width="1.5" height="20" fill="#5a5a66"/>
+<text x="496" y="221" fill="#ffe040" textLength="150" lengthAdjust="spacingAndGlyphs">NEW HIGH SCORE!</text>
+<rect x="1130.25" y="206" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="226" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="226" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="246" width="1.5" height="20" fill="#5a5a66"/>
+<text x="546" y="261" fill="#f2f2f2" textLength="50" lengthAdjust="spacingAndGlyphs">04270</text>
+<rect x="1130.25" y="246" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="266" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="266" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="286" width="1.5" height="20" fill="#5a5a66"/>
+<text x="476" y="301" fill="#f0a080" textLength="190" lengthAdjust="spacingAndGlyphs">ENTER YOUR INITIALS</text>
+<rect x="1130.25" y="286" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="306" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="306" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="326" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="326" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="346" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="346" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="366" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="366" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="386" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="386" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="406" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="406" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="426" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="426" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="446" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="446" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="466" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="466" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="486" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="486" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="506" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="506" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="526" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="526" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="546" width="1.5" height="20" fill="#5a5a66"/>
+<text x="406" y="561" fill="#5a5a66" textLength="330" lengthAdjust="spacingAndGlyphs">TYPE OR USE ARROWS, ENTER TO SAVE</text>
+<rect x="1130.25" y="546" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="566" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="566" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="586" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="586" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="606" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="606" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="626" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="626" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="646" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="646" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="666" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="666" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="686" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="686" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="706" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="706" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="726" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="726" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="746" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="746" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="20.25" y="766" width="1.5" height="20" fill="#5a5a66"/>
+<rect x="1130.25" y="766" width="1.5" height="20" fill="#5a5a66"/>
+<text x="1036" y="801" fill="#f2f2f2" textLength="90" lengthAdjust="spacingAndGlyphs">CREDIT 00</text>
+</g>
+</svg>
