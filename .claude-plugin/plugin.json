@@ -1,0 +1,10 @@
+{
+  "name": "claude-invaders",
+  "displayName": "Claude Invaders",
+  "version": "1.0.0",
+  "description": "Space Invaders starring Clawd, playable in the terminal while Claude works. Pauses the game when Claude finishes.",
+  "author": { "name": "DontPanic345" },
+  "repository": "https://github.com/DontPanic345/claude-invaders",
+  "license": "MIT",
+  "keywords": ["game", "space-invaders", "retro", "fun"]
+}

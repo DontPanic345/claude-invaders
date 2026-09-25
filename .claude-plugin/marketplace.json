@@ -1,0 +1,12 @@
+{
+  "name": "claude-invaders",
+  "owner": { "name": "DontPanic345" },
+  "description": "Retro terminal games to play while Claude works.",
+  "plugins": [
+    {
+      "name": "claude-invaders",
+      "source": "./",
+      "description": "Space Invaders starring Clawd, playable in the terminal while Claude works."
+    }
+  ]
+}
