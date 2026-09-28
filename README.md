@@ -24,6 +24,14 @@ game pauses with a jingle so you know to switch back.
 
 ![The game pauses when Claude finishes](docs/claude-done.svg)
 
+### In the same terminal
+
+Run `/bg` in Claude Code to move the session to the background and get your shell back,
+then run `claude-invaders` there. Press C to hand the terminal back to Claude, and Ctrl+Z in
+Claude to return to the paused game.
+
+This needs `claude-invaders` on your PATH: `npm install -g github:DontPanic345/claude-invaders`.
+
 ## Arcade features
 
 - The march speeds up as the invaders fall, to the original four-note heartbeat.
@@ -46,6 +54,7 @@ game pauses with a jingle so you know to switch back.
 | P         | Pause        |
 | M         | Sound on/off |
 | B         | Boss key     |
+| C         | Back to Claude, after `/bg` |
 | Q         | Quit         |
 
 Needs a truecolor terminal of at least 80x30, such as Windows Terminal, and Node.js 18 or later.

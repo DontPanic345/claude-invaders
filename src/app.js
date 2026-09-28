@@ -37,6 +37,9 @@ export class App {
     this.paused = false;
     this.boss = false;
     this.quitRequested = false;
+    // Set by the host while a background Claude Code session is available to return to.
+    this.claudeSession = null;
+    this.returnRequested = false;
     this.highlightRank = -1;
     this.game = null;
     this.resize();
@@ -142,6 +145,12 @@ export class App {
       if (sceneEvents.length > 0) {
         this.boss = false;
       }
+      return;
+    }
+
+    if (this.claudeSession && this.scene !== 'initials' && sceneEvents.includes('c')) {
+      this.setPaused(true);
+      this.returnRequested = true;
       return;
     }
 
@@ -398,20 +407,21 @@ export class App {
   statusText() {
     const blink = Math.floor(this.tickCount / 20) % 2 === 0;
     const muted = this.sound.isMuted?.() ? ' [MUTED]' : '';
+    const back = this.claudeSession ? '  C: CLAUDE' : '';
     if (this.claudeStatus) {
       const { event } = this.claudeStatus;
       if (event === 'working') {
-        return { text: `CLAUDE: WORKING ${SPINNER[Math.floor(this.tickCount / 8) % 4]}${muted}`, color: colors.orange };
+        return { text: `CLAUDE: WORKING ${SPINNER[Math.floor(this.tickCount / 8) % 4]}${back}${muted}`, color: colors.orange };
       }
       if (event === 'done') {
-        return { text: blink ? `CLAUDE: DONE!${muted}` : `             ${muted}`, color: colors.green };
+        return { text: blink ? `CLAUDE: DONE!${back}${muted}` : `             ${back}${muted}`, color: colors.green };
       }
-      return { text: blink ? `CLAUDE: NEEDS YOU${muted}` : `                 ${muted}`, color: colors.yellow };
+      return { text: blink ? `CLAUDE: NEEDS YOU${back}${muted}` : `                 ${back}${muted}`, color: colors.yellow };
     }
     if (this.scene === 'play') {
-      return { text: `P PAUSE  M SOUND  B BOSS${muted}`, color: colors.dim };
+      return { text: `P PAUSE  M SOUND  B BOSS${back}${muted}`, color: colors.dim };
     }
-    return muted ? { text: muted.trim(), color: colors.dim } : null;
+    return back || muted ? { text: `${back}${muted}`.trim(), color: colors.dim } : null;
   }
 
   renderOverlays(x0, y0, width, height) {
@@ -420,7 +430,8 @@ export class App {
     if (this.scene === 'play' && this.paused) {
       const lines = ['             ', '   PAUSED    ', '             '];
       lines.forEach((line, i) => screen.centerText(midRow - 2 + i, line, colors.black, colors.white, x0, width));
-      screen.centerText(midRow + 2, ' P / SPACE RESUME   Q QUIT GAME ', colors.white, colors.black, x0, width);
+      const back = this.claudeSession ? '   C CLAUDE' : '';
+      screen.centerText(midRow + 2, ` P / SPACE RESUME   Q QUIT GAME${back} `, colors.white, colors.black, x0, width);
     }
     if (this.scene === 'demo') {
       if (Math.floor(this.tickCount / 30) % 2 === 0) {

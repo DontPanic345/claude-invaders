@@ -119,6 +119,38 @@ test('claude finishing pauses the game and shows a banner', () => {
   assert.match(visible(), /CLAUDE HAS FINISHED/);
 });
 
+test('C pauses the game and asks to return to a background Claude session', () => {
+  const { app, input, run, visible, clear } = createApp();
+  input.press('space');
+  run(200);
+  input.press('c');
+  run(1);
+  assert.equal(app.returnRequested, false);
+  assert.equal(app.paused, false);
+
+  app.claudeSession = { id: 'c22e8c9a' };
+  clear();
+  run(2);
+  assert.match(visible(), /C: CLAUDE/);
+  input.press('c');
+  run(1);
+  assert.ok(app.returnRequested);
+  assert.ok(app.paused);
+});
+
+test('C types an initial rather than returning to Claude', () => {
+  const { app, input, run } = createApp();
+  input.press('space');
+  run(200);
+  app.claudeSession = { id: 'c22e8c9a' };
+  app.game.score = 4200;
+  app.finishGame();
+  input.press('c');
+  run(1);
+  assert.equal(app.returnRequested, false);
+  assert.equal(app.initials[0], 'C');
+});
+
 test('konami code toggles rapid fire', () => {
   const { app, input, run } = createApp();
   input.press('up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a');

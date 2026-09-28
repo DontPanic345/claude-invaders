@@ -2,6 +2,7 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { App } from '../src/app.js';
+import { attachSession, findBackgroundSession } from '../src/claude-session.js';
 import { statusEvents, watchStatus, writeStatus } from '../src/claude-status.js';
 import { loadScores, saveScores } from '../src/highscores.js';
 import { createInput } from '../src/input.js';
@@ -26,7 +27,10 @@ const usage = `Claude Invaders — Space Invaders starring Clawd.
                               tell running games what Claude is doing (for hooks)
 
   --mute                      start with sound off
-  --no-autopause              keep playing when Claude finishes`;
+  --no-autopause              keep playing when Claude finishes
+
+  After /bg in Claude Code, run claude-invaders in the same terminal: C hands the terminal
+  to that background session, and Ctrl+Z there returns to the paused game.`;
 
 const passThrough = args.filter((arg) => arg === '--mute' || arg === '--no-autopause');
 
@@ -91,7 +95,29 @@ const play = () => {
     saveScores,
     autoPause: !has('--no-autopause'),
   });
-  const stopWatching = watchStatus((event) => app.onClaudeStatus(event));
+  const refreshSession = () =>
+    findBackgroundSession(process.cwd()).then((session) => {
+      app.claudeSession = session;
+    });
+  refreshSession();
+  const sessionTimer = setInterval(refreshSession, 10_000);
+  const stopWatching = watchStatus((event) => {
+    app.onClaudeStatus(event);
+    refreshSession();
+  });
+
+  const enterScreen = () => {
+    stdout.write('\x1b]0;Claude Invaders\x07\x1b[?1049h\x1b[?25l\x1b[?7l');
+    stdin.setRawMode(true);
+    stdin.resume();
+  };
+  const leaveScreen = () => {
+    if (stdin.isTTY) {
+      stdin.setRawMode(false);
+    }
+    stdin.pause();
+    stdout.write('\x1b[0m\x1b[?7h\x1b[?25h\x1b[?1049l');
+  };
 
   let restored = false;
   const restore = () => {
@@ -99,12 +125,10 @@ const play = () => {
       return;
     }
     restored = true;
+    clearInterval(sessionTimer);
     stopWatching();
     helper?.stop();
-    if (stdin.isTTY) {
-      stdin.setRawMode(false);
-    }
-    stdout.write('\x1b[0m\x1b[?7h\x1b[?25h\x1b[?1049l');
+    leaveScreen();
   };
   process.on('exit', restore);
   process.on('uncaughtException', (error) => {
@@ -113,14 +137,28 @@ const play = () => {
     process.exit(1);
   });
 
-  stdout.write('\x1b]0;Claude Invaders\x07\x1b[?1049h\x1b[?25l\x1b[?7l');
-  stdin.setRawMode(true);
-  stdin.resume();
+  enterScreen();
   stdout.on('resize', () => app.resize());
 
   const TICK_MS = 1000 / 60;
   let last = performance.now();
   let pending = 0;
+
+  const returnToClaude = async () => {
+    app.returnRequested = false;
+    const session = await findBackgroundSession(process.cwd());
+    app.claudeSession = session;
+    if (session) {
+      leaveScreen();
+      await attachSession(session.id);
+      input.drainEvents();
+      enterScreen();
+      app.resize();
+    }
+    last = performance.now();
+    loop();
+  };
+
   const loop = () => {
     const now = performance.now();
     pending += now - last;
@@ -137,6 +175,10 @@ const play = () => {
     if (app.quitRequested) {
       restore();
       process.exit(0);
+    }
+    if (app.returnRequested) {
+      returnToClaude();
+      return;
     }
     if (ticks > 0) {
       app.render();
